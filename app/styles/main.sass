@@ -1,16 +1,12 @@
 
 \:root
-  --red: #d45741
-  --yellow: #f7bf48
-  --green: #45b853
-  --white: #FFFFFF
-  --gray: #c2cbd4
   --breakpoint-xs: 0
   --breakpoint-sm: 576px
   --breakpoint-md: 768px
   --breakpoint-lg: 992px
   --breakpoint-xl: 1200px
-  // --font-family-sans-serif: 'Open Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
 
 $main-bg: #f8f9fb;
 $sidebar-bg: #fff;
@@ -22,11 +18,13 @@ $green: #45b853;
 $white: #fff;
 $red: #d45741;
 $fz-main: 14px;
+$font-family-main: 'Open Sans', sans-serif;
 
 body, html
   height: 100%
   color: $color-main
   font-size: $fz-main
+  font-family: $font-family-main
 .page
   position: relative
   height: 100%
@@ -43,6 +41,8 @@ body, html
     margin-left: 245px
     background-color: $main-bg
     padding: 48px 15px 40px
+  &-title
+    margin-bottom: 45px
 
 .title-h2  
   font-weight: 400
@@ -51,17 +51,10 @@ body, html
   text-transform: uppercase
   margin-bottom: 10px
   font-size: 12px
-  letter-spacing: 0.5px
+
 .user
-  &-image
+  .avatar-big
     display: inline-block
-    width: 67px
-    height: 67px
-    border-radius: 50%
-    overflow: hidden
-    margin-right: 20px
-    img
-      width: 100%
   &-name
     position: relative
   &-role
@@ -69,7 +62,7 @@ body, html
     font-size: 13px
   &-link
     display: block
-    margin: 5px 0 0
+    margin: 8px 0 0
     color: $color-main
     font-weight: 700
     cursor: pointer
@@ -166,3 +159,81 @@ body, html
   position: absolute
   bottom: 40px
 
+.card
+  background-color: #ffffff
+  border-radius: 4px
+  border: 1px solid #dee2e5
+  font-weight: 700
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 40px
+  &-item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    padding: 10px 29px 10px 19px
+    border-bottom: 1px solid #e6e9ee
+    &:last-child
+      border-bottom: none
+    &__left
+      flex-grow: 1
+      display: flex
+      flex-flow: row nowrap
+      align-items: center 
+    &__right
+      flex-grow: 1
+      display: flex
+      flex-flow: row nowrap
+      align-items: center 
+      justify-content: flex-end
+    
+      
+      
+.card-performers
+  .card-item
+    transition: all 0.5s ease
+    position: relative
+    &:hover  
+      background-color: #f5faff 
+      .performers-payment,
+      .performers-element
+        visibility: hidden
+      .performers-link__wrap
+        display: block
+        position: absolute
+        right: 29px
+.avatar
+  display: inline-block
+  overflow: hidden  
+.avatar-small
+  width: 30px
+  height: 30px
+  margin-right: 15px
+.avatar-big  
+  width: 67px
+  height: 67px
+  margin-right: 20px
+.img-circle
+  width: 100%
+  border-radius: 50%
+
+.performers
+  &-link
+    &:link,
+    &:hover
+      color: #038aff
+      text-decoration: none
+    &__wrap
+      display: none  
+      text-align: right  
+  &-element
+    color: $color-grey
+    margin-left: 20px
+    &__wrap
+      padding-right: 30px
+  .avatar-small
+    margin-right: 15px
+    &__wrap
+      width: 30px
+
+     

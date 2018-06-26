@@ -12,8 +12,8 @@ html(lang='en')
       aside.page-sidebar#sidebarLeft
         .sidebar-header
           .user.user-online
-            .user-image
-              img.img-circle.img-responsive(src='./images/avatar-main.jpg', alt='')
+            .avatar.avatar-big
+              img.img-circle(src='./images/avatar-main.jpg', alt='')
             .user-details
               a#profile-menu-link(href='#').user-link
                 span.user-name Andrew
@@ -59,38 +59,165 @@ html(lang='en')
           a#logout.logout-link(href='#') Logout         
       .page-inner
         .container
-          h2.title-h2 Top Performers
+          .page-title
+            h2.title-h2 Top Performers
           .row
             .col-xs-12.col-sm-6
               h4.title-h4 Favourites
-              .table-info.table-performers
-                table.table
-                  tbody
-                    tr
-                      td 
-                        .performers-img
-                          img.img-circle(src='/images/avatar.png', alt='')
-                      td
-                        .performers-name.
-                          Beatrice Hawkins
-                      td
-                        .performers-payment. 
-                          1200
-                      td    
-                        .performers-element.
-                          3 Elements
-                      td    
-                        .performers-link.    
-                          View Personal Details  
+              .card.card-performers
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details   
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details 
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details           
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details 
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details            
             .col-xs-12.col-sm-6
               h4.title-h4 Recent
-              .table-info.table-responsive
-                table.table
-                  tbody
-                    tr
-                      td
-                      td
-                      td
+              .card.card-performers
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details   
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details 
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details           
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details 
+                .card-item
+                  .card-item__left 
+                    .avatar.avatar-small
+                      img.img-circle(src='/images/avatar1.jpg', alt='')
+                    .performers-name
+                      | Beatrice Hawkins
+                  .card-item__right
+                    .performers-payment 
+                      span.currency $
+                      span.currency-val 1200
+                    .performers-element  
+                      | 3 Elements
+                    .performers-link__wrap
+                      a.performers-link(href="#",title="View Personal Details")    
+                        | View Personal Details
   script(src='./js/bundle.js')
   script(src='./js/vendor.bundle.js')
     
