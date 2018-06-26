@@ -14,7 +14,7 @@ const path = {
     scripts: 'www/js',
     images: 'www/images',
     sprite: 'www/css/',
-    fonts: 'www/fonts'
+    fonts: 'www/webfonts'
   },
   app: {
     root: 'app',
@@ -66,7 +66,8 @@ gulp.task('vendor-scripts', function (done) {
   gulp.src([
       './node_modules/jquery/dist/jquery.min.js',
       './node_modules/popper.js/dist/popper.min.js',
-      './node_modules/bootstrap/dist/js/bootstrap.min.js'
+      './node_modules/bootstrap/dist/js/bootstrap.min.js',
+      './node_modules/@fortawesome/fontawesome-free/js/all.js'
     ])
     .pipe(concat('vendor.bundle.js'))
     .pipe(gulp.dest(path.public.scripts))
@@ -96,7 +97,8 @@ gulp.task('styles', function (done) {
  */
 gulp.task('vendor-css', function (done) {
   gulp.src([
-      './node_modules/bootstrap/dist/css/bootstrap.min.css'
+      './node_modules/bootstrap/dist/css/bootstrap.min.css',
+      './node_modules/@fortawesome/fontawesome-free/css/all.css'
     ])
     .pipe(sass({
       errLogToConsole: true
@@ -124,7 +126,10 @@ gulp.task('fonts', function (done) {
  * build vendor fonts
  */
 gulp.task('vendor-fonts', function (done) {
-  gulp.src('./node_modules/bootstrap/fonts/*.*')
+  gulp.src([
+    './node_modules/bootstrap/fonts/*.*',
+    './node_modules/@fortawesome/fontawesome-free/webfonts/*.*'
+    ])
     .pipe(gulp.dest(path.public.fonts))
     .on('error', function (err) {
       throw new Error(err);

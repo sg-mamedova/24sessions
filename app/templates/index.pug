@@ -56,7 +56,8 @@ html(lang='en')
                   | 8
             li.sidebar-menu__item 
               a(href='#') Contacts       
-          a#logout.logout-link(href='#') Logout         
+          a#logout.logout-link(href='#') Logout   
+            i.fas.fa-sign-out-alt      
       .page-inner
         .container
           .page-title
@@ -85,11 +86,11 @@ html(lang='en')
                     .avatar.avatar-small
                       img.img-circle(src='/images/avatar1.jpg', alt='')
                     .performers-name
-                      | Beatrice Hawkins
+                      | Ann Hunter
                   .card-item__right
                     .performers-payment 
                       span.currency $
-                      span.currency-val 1200
+                      span.currency-val 725
                     .performers-element  
                       | 3 Elements
                     .performers-link__wrap
@@ -100,11 +101,11 @@ html(lang='en')
                     .avatar.avatar-small
                       img.img-circle(src='/images/avatar1.jpg', alt='')
                     .performers-name
-                      | Beatrice Hawkins
+                      | Minnie Ferguson
                   .card-item__right
-                    .performers-payment 
+                    .payment.performers-payment 
                       span.currency $
-                      span.currency-val 1200
+                      span.currency-val 700
                     .performers-element  
                       | 3 Elements
                     .performers-link__wrap
@@ -115,11 +116,11 @@ html(lang='en')
                     .avatar.avatar-small
                       img.img-circle(src='/images/avatar1.jpg', alt='')
                     .performers-name
-                      | Beatrice Hawkins
+                      | Owen Grant
                   .card-item__right
                     .performers-payment 
                       span.currency $
-                      span.currency-val 1200
+                      span.currency-val 620
                     .performers-element  
                       | 3 Elements
                     .performers-link__wrap
@@ -130,11 +131,11 @@ html(lang='en')
                     .avatar.avatar-small
                       img.img-circle(src='/images/avatar1.jpg', alt='')
                     .performers-name
-                      | Beatrice Hawkins
+                      | Lewis Fowler
                   .card-item__right
                     .performers-payment 
                       span.currency $
-                      span.currency-val 1200
+                      span.currency-val 550
                     .performers-element  
                       | 3 Elements
                     .performers-link__wrap
@@ -218,6 +219,148 @@ html(lang='en')
                     .performers-link__wrap
                       a.performers-link(href="#",title="View Personal Details")    
                         | View Personal Details
+          .row
+            .col-xs-12.col-sm-6
+              .card.card-payments
+                .card-header.card-header__icon
+                  | Payments
+                  a(href="#").icon-circle.icon-right
+                    i.fas.fa-plus
+                .card-item
+                  .card-item__left 
+                    | Design Works 
+                  .card-item__right
+                     .status
+                       span.label.label-danger delayed
+                     .payment 
+                        span.currency $
+                        span.currency-val 2,580
+                .card-item.card-header__icon
+                  .card-item__left 
+                    | New Illustrations
+                  .card-item__right
+                     .status
+                       span.label.label-warning pending invoice
+                     .payment 
+                        span.currency $
+                        span.currency-val 980
+                .card-item
+                  .card-item__left  
+                    | UX Study
+                  .card-item__right
+                     .status
+                       span.label.label-success approved
+                     .payment 
+                        span.currency $
+                        span.currency-val 10,500
+                .card-item
+                  .card-item__left 
+                    | Landing Page Design...
+                  .card-item__right
+                     .status
+                        span.label.label-warning pending invoice
+                     .payment 
+                        span.currency $
+                        span.currency-val 150    
+                .card-item
+                  .card-item__left 
+                    | iOS App Design - 16...
+                  .card-item__right
+                     .status
+                       span.label.label-notactive due in 1 week
+                     .payment 
+                        span.currency $
+                        span.currency-val 3,500
+                .card-item
+                  .card-item__left 
+                    | Design Works
+                  .card-item__right
+                     .status
+                       span.label.label-notactive due in 1 week
+                     .payment 
+                        span.currency $
+                        span.currency-val 2,580
+                .card-item
+                  .card-item__left 
+                    | New Illustrations
+                  .card-item__right
+                     .status
+                       span.label.label-notactive due in 1 week
+                     .payment 
+                        span.currency $
+                        span.currency-val 980 
+                .card-item
+                  .card-item__left 
+                    | UX Study
+                  .card-item__right
+                     .status
+                       span.label.label-notactive due in 1 week
+                     .payment 
+                        span.currency $
+                        span.currency-val 10,500               
+
+            .col-xs-12.col-sm-6
+              .card.card-tasks
+                .card-header
+                  | Upcoming Tasks
+                  a(href="#").icon-circle.icon-right
+                    i.fas.fa-plus
+                .card-item.card-tasks__item
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Create new prototype for the landing page
+                  .card-item__right
+                    .status
+                      span.label.label-danger delayed
+                .card-item.card-tasks__item
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Add new Google Analytics code to all main files
+                  .card-item__right
+                    .status
+                      span.label.label-warning pending invoice
+                .card-item.card-tasks__item
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Finish Dashboard UI Kit update
+                  .card-item__right
+                    .status
+                      span.label.label-notactive due in 1 week
+                .card-item.card-tasks__item
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Update parallax scroll on team page
+                  .card-item__right
+                    .status
+                      span.label.label-notactive due in 1 week
+                .card-item.card-tasks__item.cheked
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Research new user stories whith UX Specialist
+                  .card-item__right
+                    .status
+                      span.label.label-danger delayed   
+                .card-item.card-tasks__item.cheked
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Research new user stories whith UX Specialist
+                  .card-item__right
+                    .status
+                      span.label.label-danger delayed     
+                .card-item.card-tasks__item.cheked
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Research new user stories whith UX Specialist
+                  .card-item__right
+                    .status
+                      span.label.label-danger delayed     
+                .card-item.card-tasks__item.cheked
+                  .card-item__left
+                    i.fas.fa-check
+                    span.card-tasks__text Research new user stories whith UX Specialist
+                  .card-item__right
+                    .status
+                        span.label.label-danger delayed                                                     
   script(src='./js/bundle.js')
   script(src='./js/vendor.bundle.js')
     

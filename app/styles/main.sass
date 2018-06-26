@@ -15,10 +15,13 @@ $color-main: #0b2c5f;
 $color-grey: #b3b9c7;
 $gray: #c2cbd4;
 $green: #45b853;
-$white: #fff;
 $red: #d45741;
 $fz-main: 14px;
 $font-family-main: 'Open Sans', sans-serif;
+$danger: #d55643;
+$warning: #f7bf48;
+$success: #44b752;
+$notactive: #c2cbd4;
 
 body, html
   height: 100%
@@ -26,6 +29,7 @@ body, html
   font-size: $fz-main
   font-family: $font-family-main
 .page
+  overflow-y: scroll
   position: relative
   height: 100%
   &-sidebar
@@ -132,7 +136,7 @@ body, html
   display: none
 
 .select-items div:hover, .same-as-selected
-  color: $white
+  color: #fff
   background-color: rgba(0, 0, 0, 0.1)  
 
 .sidebar-header 
@@ -152,26 +156,37 @@ body, html
   border-radius: 50%
   margin-left: 8px
   font-weight: 400
+  font-size: 10px
+  vertical-align: middle
   &-info
     background: #ff616f     
 .logout-link
   color: $color-grey
+  font-size: 14px
   position: absolute
   bottom: 40px
-
+  i
+    margin-left: 5px
 .card
   background-color: #ffffff
-  border-radius: 4px
+  border-radius: 5px
   border: 1px solid #dee2e5
   font-weight: 700
   width: 100%;
   max-width: 100%;
   margin-bottom: 40px
+  &-header
+    background-color: #fff
+    font-size: 16px
+    padding: 25px 29px
+    &.card-header__icon
+      padding-right: 60px
+      position: relative
   &-item
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
-    padding: 10px 29px 10px 19px
+    padding: 14px 29px
     border-bottom: 1px solid #e6e9ee
     &:last-child
       border-bottom: none
@@ -186,13 +201,16 @@ body, html
       flex-flow: row nowrap
       align-items: center 
       justify-content: flex-end
+  &-payments
+    .payment
+      min-width: 80px
+      text-align: right  
     
-      
-      
 .card-performers
   .card-item
     transition: all 0.5s ease
     position: relative
+    padding: 10px 29px 10px 19px
     &:hover  
       background-color: #f5faff 
       .performers-payment,
@@ -202,6 +220,47 @@ body, html
         display: block
         position: absolute
         right: 29px
+
+.card-tasks__item
+  .card-item__left
+    padding-left: 35px
+    position: relative
+    .fa-check
+      display: none
+      font-size: 10px
+      color: #c3ccd5
+    &:before
+      content: ''
+      display: block
+      width: 22px
+      height: 22px
+      border-radius: 50%
+      border: 1px solid #c3ccd5
+      position: absolute
+      left: 0
+  .card-tasks__text 
+    position: relative   
+    &:after
+      content: ''
+      display: none
+      width: 100%
+      height: 1px
+      background-color: #97a3b3
+      position: absolute    
+      top: 50%
+      left: -4px
+  &.cheked
+    .card-item__left
+      color: $gray
+      .fa-check
+        display: block
+        position: absolute
+        left: 6px
+    .card-tasks__text    
+      &:after
+        display: block
+    .card-item__right
+      display: none
 .avatar
   display: inline-block
   overflow: hidden  
@@ -231,9 +290,39 @@ body, html
     margin-left: 20px
     &__wrap
       padding-right: 30px
-  .avatar-small
-    margin-right: 15px
-    &__wrap
-      width: 30px
+    
 
-     
+.label
+  padding: 5px 7px
+  font-size: 8px
+  font-weight: 700
+  line-height: 1
+  color: #fff
+  text-align: center
+  white-space: nowrap
+  letter-spacing: 1px
+  text-transform: uppercase
+  vertical-align: baseline
+  border-radius: 3px     
+  &-danger
+    background-color: $danger
+  &-warning  
+    background-color: $warning
+  &-success
+    background-color: $success
+  &-notactive
+    background-color: $notactive
+
+.icon-right
+  position: absolute
+  right: 30px
+  color: #7f90a4
+ 
+.icon-circle
+  border: 1px solid #e1e5e8
+  width: 32px
+  height: 32px 
+  border-radius: 50%
+  text-align: center
+  i 
+    line-height: 1.9
