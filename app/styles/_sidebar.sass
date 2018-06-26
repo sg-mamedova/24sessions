@@ -1,0 +1,64 @@
+.sidebar-pusher
+  display: block
+  color: #5F5F5F
+  font-size: 20px
+  border: 1px solid #dee2e5
+  i, svg 
+    margin-right: 15px
+.btn-push
+  display: block
+  padding: 7px 15px 
+  color: $primary-color
+  &:link,
+  &:hover
+    cursor: pointer
+    text-decoration: none
+    color: $primary-color
+.sidebar-header 
+  margin-bottom: 25px
+.sidebar-menu
+  &__list
+    margin: 0 0 29px
+    padding: 0
+  &__item
+    list-style: none
+    margin: 18px 0 10px
+    a
+      color: $primary-color
+      &:link,
+      &:hover
+        text-decoration: none
+
+.user
+  .avatar-big
+    display: inline-block
+  &-name
+    position: relative
+  &-role
+    color: $color-grey
+    font-size: 13px
+  &-link
+    display: block
+    margin: 8px 0 0
+    color: $primary-color
+    font-weight: 700
+    cursor: pointer
+    font-size: 16px
+    &:hover,
+    &:active
+      color: $primary-color
+      text-decoration: none
+  i 
+    position: absolute
+    right: -15px
+    bottom: 6px
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    background-color: $gray
+  &.user-online
+    i
+      background-color: $green
+  &-details
+    display: inline-block
+    vertical-align: top        

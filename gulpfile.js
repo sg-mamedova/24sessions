@@ -64,9 +64,6 @@ gulp.task('scripts', function (done) {
  */
 gulp.task('vendor-scripts', function (done) {
   gulp.src([
-      './node_modules/jquery/dist/jquery.min.js',
-      './node_modules/popper.js/dist/popper.min.js',
-      './node_modules/bootstrap/dist/js/bootstrap.min.js',
       './node_modules/@fortawesome/fontawesome-free/js/all.js'
     ])
     .pipe(concat('vendor.bundle.js'))

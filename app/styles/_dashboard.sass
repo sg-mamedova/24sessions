@@ -1,0 +1,23 @@
+.dashboard
+  position: relative
+  min-height: 100%
+  &-sidebar
+    display: none
+    position: absolute
+    width: 0
+    min-height: 100%
+    background-color: $sidebar-bg
+    box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.07)
+    padding: 50px 30px 60px
+    transition: all .3s ease-in-out
+  &-sidebar.open 
+    display: block
+    width: 245px 
+    z-index: 1
+  &-inner
+    min-height: 100%
+    background-color: $main-bg
+    padding: 20px 0 40px
+  
+  &-title
+    margin-bottom: 25px

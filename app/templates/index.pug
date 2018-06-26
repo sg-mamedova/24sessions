@@ -8,8 +8,13 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='./css/bundle.css')
 
   body
-    .page
-      aside.page-sidebar#sidebarLeft
+    main.dashboard
+      .sidebar-pusher
+        a.btn-push(href='#')#pushBtn
+          i.fa.fa-bars 
+          | Menu
+
+      aside.dashboard-sidebar#sidebarLeft
         .sidebar-header
           .user.user-online
             .avatar.avatar-big
@@ -58,12 +63,12 @@ html(lang='en')
               a(href='#') Contacts       
           a#logout.logout-link(href='#') Logout   
             i.fas.fa-sign-out-alt      
-      .page-inner
-        .container
-          .page-title
+      .dashboard-inner#dashboardInner
+        .container-fluid
+          .dashboard-title
             h2.title-h2 Top Performers
           .row
-            .col-xs-12.col-sm-6
+            .col-12.col-lg-6
               h4.title-h4 Favourites
               .card.card-performers
                 .card-item
@@ -141,7 +146,7 @@ html(lang='en')
                     .performers-link__wrap
                       a.performers-link(href="#",title="View Personal Details")    
                         | View Personal Details            
-            .col-xs-12.col-sm-6
+            .col-12.col-lg-6
               h4.title-h4 Recent
               .card.card-performers
                 .card-item
@@ -220,7 +225,7 @@ html(lang='en')
                       a.performers-link(href="#",title="View Personal Details")    
                         | View Personal Details
           .row
-            .col-xs-12.col-sm-6
+            .col-12.col-lg-6
               .card.card-payments
                 .card-header.card-header__icon
                   | Payments
@@ -255,7 +260,7 @@ html(lang='en')
                         span.currency-val 10,500
                 .card-item
                   .card-item__left 
-                    | Landing Page Design...
+                    | Landing Page Design
                   .card-item__right
                      .status
                         span.label.label-warning pending invoice
@@ -264,7 +269,7 @@ html(lang='en')
                         span.currency-val 150    
                 .card-item
                   .card-item__left 
-                    | iOS App Design - 16...
+                    | iOS App Design - 16
                   .card-item__right
                      .status
                        span.label.label-notactive due in 1 week
@@ -299,7 +304,7 @@ html(lang='en')
                         span.currency $
                         span.currency-val 10,500               
 
-            .col-xs-12.col-sm-6
+            .col-12.col-lg-6
               .card.card-tasks
                 .card-header
                   | Upcoming Tasks
@@ -333,28 +338,28 @@ html(lang='en')
                   .card-item__right
                     .status
                       span.label.label-notactive due in 1 week
-                .card-item.card-tasks__item.cheked
+                .card-item.card-tasks__item.checked
                   .card-item__left
                     i.fas.fa-check
                     span.card-tasks__text Research new user stories whith UX Specialist
                   .card-item__right
                     .status
                       span.label.label-danger delayed   
-                .card-item.card-tasks__item.cheked
+                .card-item.card-tasks__item.checked
                   .card-item__left
                     i.fas.fa-check
                     span.card-tasks__text Research new user stories whith UX Specialist
                   .card-item__right
                     .status
                       span.label.label-danger delayed     
-                .card-item.card-tasks__item.cheked
+                .card-item.card-tasks__item.checked
                   .card-item__left
                     i.fas.fa-check
                     span.card-tasks__text Research new user stories whith UX Specialist
                   .card-item__right
                     .status
                       span.label.label-danger delayed     
-                .card-item.card-tasks__item.cheked
+                .card-item.card-tasks__item.checked
                   .card-item__left
                     i.fas.fa-check
                     span.card-tasks__text Research new user stories whith UX Specialist

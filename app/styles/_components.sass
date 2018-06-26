@@ -1,0 +1,119 @@
+.avatar
+  display: inline-block
+  overflow: hidden  
+
+.avatar-small
+  width: 30px
+  height: 30px
+  margin-right: 15px
+
+.avatar-big  
+  width: 67px
+  height: 67px
+  margin-right: 20px
+
+.img-circle
+  width: 100%
+  border-radius: 50%
+.badge
+  width: 18px
+  height: 18px
+  border-radius: 50%
+  margin-left: 8px
+  font-weight: 400
+  font-size: 10px
+  vertical-align: top
+  &-info
+    background: #ff616f 
+
+.label
+  padding: 5px 7px
+  font-size: 8px
+  font-weight: 700
+  line-height: 1
+  color: #fff
+  text-align: center
+  white-space: nowrap
+  letter-spacing: 1px
+  text-transform: uppercase
+  vertical-align: baseline
+  border-radius: 3px     
+  &-danger
+    background-color: $danger
+  &-warning  
+    background-color: $warning
+  &-success
+    background-color: $success
+  &-notactive
+    background-color: $notactive
+
+.icon-right
+  position: absolute
+  right: 15px
+  color: #7f90a4
+ 
+.icon-circle
+  border: 1px solid #e1e5e8
+  width: 32px
+  height: 32px 
+  border-radius: 50%
+  text-align: center
+  i 
+    line-height: 1.9
+
+.logout-link
+  color: $color-grey
+  font-size: 14px
+  position: absolute
+  bottom: 40px
+  i
+    margin-left: 5px    
+
+.custom-select
+  position: relative
+  background: $select-bg
+  padding: 5px 13px
+  margin-bottom: 33px
+  height: auto
+  font-size: 13px
+  line-height: 1.8
+  select
+    display: none
+    
+.select-selected
+  background-color: $select-bg
+  &:after
+    position: absolute
+    content: ""
+    top: 16px
+    right: 11px
+    width: 0
+    height: 0
+    border: 5px solid transparent
+    border-color: $color-grey transparent transparent transparent
+  &.select-arrow-active:before
+    border-color: transparent transparent $color-grey transparent
+    top: 7px
+
+.select-items div, .select-selected
+  color: $color-grey
+  cursor: pointer
+  user-select: none
+
+.select-items
+  position: absolute
+  top: 98%
+  left: -1px
+  right: 0
+  z-index: 1
+  background-color: #fff
+  border: 1px solid #dadee9
+  width: 185px
+  div
+    padding: 8px 13px
+    
+.select-hide
+  display: none
+.select-items div:hover, .same-as-selected
+  color: #fff
+  background-color: rgba(0, 0, 0, 0.1)  
