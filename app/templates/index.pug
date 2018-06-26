@@ -1,0 +1,96 @@
+doctype html
+html(lang='en')
+  head
+    title 24sessoins
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', type='text/css', href='./css/vendor.bundle.css')
+    link(rel='stylesheet', type='text/css', href='./css/bundle.css')
+
+  body
+    .page
+      aside.page-sidebar#sidebarLeft
+        .sidebar-header
+          .user.user-online
+            .user-image
+              img.img-circle.img-responsive(src='./images/avatar-main.jpg', alt='')
+            .user-details
+              a#profile-menu-link(href='#').user-link
+                span.user-name Andrew
+                  i
+              span.user-role Co-founder
+        .sidebar-menu
+          .sidebar-menu__filter
+            .title-h4 Departament
+            .custom-select
+              select#sidebarFilter
+                option(value='0', selected='selected') - Select category -
+                option(value='1', selected='selected') Marketing
+                option(value='2') Management
+
+          .title-h4 Marketing
+          ul.sidebar-menu__list
+            li.sidebar-menu__item
+              a(href='#') Overview
+            li.sidebar-menu__item
+              a(href='#') Schedule
+            li.sidebar-menu__item
+              a(href='#') Employees
+            li.sidebar-menu__item
+              a(href='#') Calendar
+               span.badge.badge-info
+                  | 3
+            li.sidebar-menu__item
+              a(href='#') Priorities    
+            li.sidebar-menu__item
+              a(href='#') Social Media  
+          .title-h4 Management
+          ul.sidebar-menu__list
+            li.sidebar-menu__item
+              a(href='#') Account
+            li.sidebar-menu__item
+              a(href='#') Payments
+            li.sidebar-menu__item
+              a(href='#') Segments
+                span.badge.badge-info
+                  | 8
+            li.sidebar-menu__item 
+              a(href='#') Contacts       
+          a#logout.logout-link(href='#') Logout         
+      .page-inner
+        .container
+          h2.title-h2 Top Performers
+          .row
+            .col-xs-12.col-sm-6
+              h4.title-h4 Favourites
+              .table-info.table-performers
+                table.table
+                  tbody
+                    tr
+                      td 
+                        .performers-img
+                          img.img-circle(src='/images/avatar.png', alt='')
+                      td
+                        .performers-name.
+                          Beatrice Hawkins
+                      td
+                        .performers-payment. 
+                          1200
+                      td    
+                        .performers-element.
+                          3 Elements
+                      td    
+                        .performers-link.    
+                          View Personal Details  
+            .col-xs-12.col-sm-6
+              h4.title-h4 Recent
+              .table-info.table-responsive
+                table.table
+                  tbody
+                    tr
+                      td
+                      td
+                      td
+  script(src='./js/bundle.js')
+  script(src='./js/vendor.bundle.js')
+    

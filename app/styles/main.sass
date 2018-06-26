@@ -1,0 +1,168 @@
+
+\:root
+  --red: #d45741
+  --yellow: #f7bf48
+  --green: #45b853
+  --white: #FFFFFF
+  --gray: #c2cbd4
+  --breakpoint-xs: 0
+  --breakpoint-sm: 576px
+  --breakpoint-md: 768px
+  --breakpoint-lg: 992px
+  --breakpoint-xl: 1200px
+  // --font-family-sans-serif: 'Open Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif
+
+$main-bg: #f8f9fb;
+$sidebar-bg: #fff;
+$select-bg: #fff;
+$color-main: #0b2c5f;
+$color-grey: #b3b9c7;
+$gray: #c2cbd4;
+$green: #45b853;
+$white: #fff;
+$red: #d45741;
+$fz-main: 14px;
+
+body, html
+  height: 100%
+  color: $color-main
+  font-size: $fz-main
+.page
+  position: relative
+  height: 100%
+  &-sidebar
+    position: absolute
+    width: 245px
+    min-height: 100%
+    background-color: $sidebar-bg
+    box-shadow: 0 1px 15px 1px rgba(241,242,244,.07)
+    padding: 50px 30px 60px
+  &-inner
+    min-height: 100%
+    width: calc(100% - 245px)
+    margin-left: 245px
+    background-color: $main-bg
+    padding: 48px 15px 40px
+
+.title-h2  
+  font-weight: 400
+.title-h4  
+  color: $color-grey
+  text-transform: uppercase
+  margin-bottom: 10px
+  font-size: 12px
+  letter-spacing: 0.5px
+.user
+  &-image
+    display: inline-block
+    width: 67px
+    height: 67px
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 20px
+    img
+      width: 100%
+  &-name
+    position: relative
+  &-role
+    color: $color-grey
+    font-size: 13px
+  &-link
+    display: block
+    margin: 5px 0 0
+    color: $color-main
+    font-weight: 700
+    cursor: pointer
+    font-size: 16px
+    &:hover,
+    &:active
+      color: $color-main
+      text-decoration: none
+  i 
+    position: absolute
+    right: -15px
+    bottom: 4px
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    background-color: $gray
+  &.user-online
+    i
+      background-color: $green
+  &-details
+    display: inline-block
+    vertical-align: top
+
+.custom-select
+  position: relative
+  background: $select-bg
+  padding: 5px 13px
+  margin-bottom: 33px
+  height: auto
+  font-size: 13px
+  line-height: 1.8
+  select
+    display: none
+    
+.select-selected
+  background-color: $select-bg
+  &:after
+    position: absolute
+    content: ""
+    top: 16px
+    right: 11px
+    width: 0
+    height: 0
+    border: 5px solid transparent
+    border-color: $color-grey transparent transparent transparent
+  &.select-arrow-active:before
+    border-color: transparent transparent $color-grey transparent
+    top: 7px
+
+.select-items div, .select-selected
+  color: $color-grey
+  cursor: pointer
+  user-select: none
+
+.select-items
+  position: absolute
+  top: 98%
+  left: -1px
+  right: 0
+  z-index: 1
+  background-color: #fff
+  border: 1px solid #dadee9
+  width: 185px
+  div
+    padding: 8px 13px
+.select-hide
+  display: none
+
+.select-items div:hover, .same-as-selected
+  color: $white
+  background-color: rgba(0, 0, 0, 0.1)  
+
+.sidebar-header 
+  margin-bottom: 25px
+.sidebar-menu
+  &__list
+    margin: 0 0 29px
+    padding: 0
+  &__item
+    list-style: none
+    margin: 18px 0 10px
+    a
+      color: $color-main 
+.badge
+  width: 18px
+  height: 18px
+  border-radius: 50%
+  margin-left: 8px
+  font-weight: 400
+  &-info
+    background: #ff616f     
+.logout-link
+  color: $color-grey
+  position: absolute
+  bottom: 40px
+
